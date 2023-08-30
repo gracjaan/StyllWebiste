@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/style.css" />
     <title>styll.</title>
     <script type="module" src="/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <nav class="navbar">
@@ -20,12 +21,12 @@
       </div>
       <div class="navbar-links">
         <div class="divider"></div>
-        <a href="#" class="navbar-text">Home</a>
-        <a href="#" class="navbar-text">About</a>
+        <a href="#" class="navbar-text-selected">Home</a>
+        <a href="#" class="navbar-text" data-target="about">About</a>
         <a href="#" class="navbar-text">Contact</a>
       </div>
     </nav>
-    <main class="main-wrapper">
+    <main class="main-wrapper" id="home-screen">
       <div class="content-wrapper">
         <div class="slider">
           <div class="dot" id="dot0"></div>
@@ -38,6 +39,36 @@
         </div>
         <div class="content">
           <div class="scrollable-content-wrapper" id="scroller">
+            <div class="page-1">
+              <div class="page-1-left">
+                <img
+                  src="/logo.svg"
+                  alt="styll."
+                  draggable="false"
+                  class="page-1-logo"
+                />
+                <img
+                  src="/static/text.svg"
+                  alt="styll."
+                  draggable="false"
+                  class="page-1-text"
+                />
+              </div>
+              <div class="page-1-right">
+                <img
+                  src="/static/leftphone.svg"
+                  alt="styll."
+                  draggable="false"
+                  class="page-1-phone"
+                />
+                <img
+                  src="/static/rightphone.svg"
+                  alt="styll."
+                  draggable="false"
+                  class="page-1-phone"
+                />
+              </div>
+            </div>
             <div class="page-1">
               <div class="page-1-left">
                 <img
