@@ -235,6 +235,16 @@ body {
 
 /* --------------------ABOUT PAGE---------------------- */
 
+.about-header {
+  font-family: Helvetica;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--secondary-color);
+  text-align: justify;
+  overflow: auto;
+}
+
 .text {
   font-family: Helvetica;
   font-size: 16px;
@@ -242,7 +252,7 @@ body {
   text-decoration: none;
   color: var(--secondary-color);
   text-align: justify;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .email-input {
