@@ -218,3 +218,9 @@ body {
 .scrollable-mid-wrapper::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
+
+.full-image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
