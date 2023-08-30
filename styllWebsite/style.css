@@ -232,3 +232,17 @@ body {
   width: 100%;
   object-fit: contain;
 }
+
+.email-input {
+  height: 40px;
+  width: 300px;
+  border-radius: 10px;
+  border: 2px solid var(--tertiary-color);
+  background-color: var(--quaternary-color);
+  padding: 10px;
+  color: var(--secondary-color);
+}
+
+.email-input:focus {
+  outline: none;
+}
