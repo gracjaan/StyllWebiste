@@ -53,7 +53,6 @@ body {
   font-weight: normal;
   text-decoration: none;
   color: var(--secondary-color);
-  opacity: 0.5;
 }
 
 .navbar-logo {
@@ -64,6 +63,15 @@ body {
   display: flex;
   flex-direction: row;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.get-app {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--tertiary-color);
+  background-color: var(--quaternary-color);
 }
 
 .divider {
