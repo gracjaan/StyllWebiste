@@ -233,6 +233,18 @@ body {
   object-fit: contain;
 }
 
+/* --------------------ABOUT PAGE---------------------- */
+
+.text {
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: none;
+  color: var(--secondary-color);
+  text-align: justify;
+  overflow: hidden;
+}
+
 .email-input {
   height: 40px;
   width: 300px;
