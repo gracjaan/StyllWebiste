@@ -33,15 +33,27 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  /* padding: 20px; */
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+}
+
+.navbar-text-selected {
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--secondary-color);
 }
 
 .navbar-text {
   font-family: Helvetica;
   font-size: 16px;
-  font-weight: 800;
+  font-weight: normal;
   text-decoration: none;
   color: var(--secondary-color);
+  opacity: 0.5;
 }
 
 .navbar-logo {
@@ -66,13 +78,17 @@ body {
   flex-direction: column;
   flex-grow: 1;
   padding: 100px;
+  position: relative;
 }
 
-.content-wrapper {
+.home-wrapper {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   gap: 100px;
+  scroll-snap-align: start;
 }
 
 .slider {
@@ -92,6 +108,7 @@ body {
   width: 20px;
   background-color: var(--tertiary-color);
   border-radius: 100px;
+  transition: background-color 0.5s ease;
 }
 
 .selected-dot {
@@ -118,8 +135,22 @@ body {
   scroll-snap-type: y mandatory;
   scrollbar-width: none;
   scroll-snap-stop: always;
-  scrollbar-width: none;
+  scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
+  scroll-padding-top: 20px;
+
+  --s: 50px; /* the size on the corner */
+  --t: 2px;  /* the thickness of the border */
+  --g: 20px; /* the gap between the border and image */
+  
+  padding: 20px;
+  outline: var(--t) solid #ffffff; /* the color here */
+  outline-offset: calc(-1*var(--t));
+  -webkit-mask:
+    conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+    0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+    linear-gradient(#000 0 0) content-box;
+  transition: .4s;
 }
 
 .scrollable-content-wrapper::-webkit-scrollbar {
@@ -132,6 +163,7 @@ body {
   height: 100%;
   width: 100%;
   scroll-snap-align: start;
+  gap: 80px;
 }
 
 .page-1-right {
@@ -147,7 +179,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
 }
 
@@ -161,4 +193,28 @@ body {
 
 .page-1-phone {
   height: 400px;
+}
+
+.mid-wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.scrollable-mid-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: hidden;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  scroll-snap-stop: always;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.scrollable-mid-wrapper::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
