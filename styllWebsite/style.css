@@ -325,7 +325,7 @@ body {
 
 /* --------------PHONE VIEW ----------------- */
 
-@media (max-width: 1022px) {
+@media (max-width: 924px) {
   .navbar-toggle {
       display: flex; /* Show the button on smaller screens */
   }
