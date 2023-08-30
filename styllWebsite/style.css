@@ -154,7 +154,9 @@ body {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
   scroll-padding-top: 20px;
+}
 
+.bezel {
   --s: 50px; /* the size on the corner */
   --t: 2px;  /* the thickness of the border */
   --g: 20px; /* the gap between the border and image */
