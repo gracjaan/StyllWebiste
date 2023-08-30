@@ -246,3 +246,17 @@ body {
 .email-input:focus {
   outline: none;
 }
+
+.message-input {
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+  border: 2px solid var(--tertiary-color);
+  background-color: var(--quaternary-color);
+  padding: 10px;
+  color: var(--secondary-color);
+}
+
+.message-input:focus {
+  outline: none;
+}
