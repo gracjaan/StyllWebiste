@@ -92,3 +92,21 @@ indicators.forEach((indicator, index) => {
     });
   });
 });
+
+const navbarToggle = document.getElementById('navbar-toggle');
+const modal = document.getElementById('modal');
+const closeButton = document.getElementById('close-button');
+
+navbarToggle.addEventListener('click', () => {
+  modal.style.display = 'block';
+});
+
+closeButton.addEventListener('click', () => {
+  modal.style.animation = 'slideUp 0.9s ease'; // Slide up animation
+  modal.addEventListener('animationend', () => {
+    if (modal.style.animationName === 'slideUp') {
+      modal.style.display = 'none';
+      modal.style.animation = 'none';
+    }
+  });
+});
