@@ -98,6 +98,7 @@ const modal = document.getElementById('modal');
 const closeButton = document.getElementById('close-button');
 
 navbarToggle.addEventListener('click', () => {
+  modal.style.animation = 'slideDown 0.3s ease'; // Slide down animation
   modal.style.display = 'block';
 });
 
