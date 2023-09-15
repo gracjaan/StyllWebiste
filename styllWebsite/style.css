@@ -386,8 +386,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  /* height: 100%; */
   z-index: 5;
   /* background-color: rgba(0, 0, 0, 0.7); */
   animation: slideDown 0.3s ease; 
@@ -416,6 +416,16 @@ body {
   color: var(--secondary-color);
 }
 
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 @keyframes slideDown {
   from {
     transform: translateY(-100%);
@@ -432,4 +442,38 @@ body {
   to {
     transform: translateY(-100%);
   }
+}
+
+/* -------------- DIALOG VIEW ----------------- */
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Define the fade-out animation */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Apply the animations to the modal */
+#dialog {
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+}
+
+/* Add a class to apply the fade-out animation when closing the modal */
+#dialog.closing {
+  animation-name: fadeOut;
+  animation-duration: 0.3s;
 }
