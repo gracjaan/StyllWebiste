@@ -96,9 +96,10 @@ indicators.forEach((indicator, index) => {
 const navbarToggle = document.getElementById('navbar-toggle');
 const modal = document.getElementById('modal');
 const closeButton = document.getElementById('close-button');
+const modalIndicators = document.querySelectorAll('.modal-text');
 
 navbarToggle.addEventListener('click', () => {
-  modal.style.animation = 'slideDown 0.3s ease'; // Slide down animation
+  modal.style.animation = 'slideDown 0.3s ease'; 
   modal.style.display = 'block';
 });
 
@@ -109,5 +110,24 @@ closeButton.addEventListener('click', () => {
       modal.style.display = 'none';
       modal.style.animation = 'none';
     }
+  });
+});
+
+// Add click event listeners to the dots
+modalIndicators.forEach((mi, index) => {
+  mi.addEventListener('click', () => {
+    // Scroll to the corresponding page
+    screens[index].scrollIntoView({
+      behavior: 'smooth', // Use 'auto' for immediate scroll
+    });
+    // Close the modal
+    modal.style.animation = 'slideUp 0.9s ease'; // Slide up animation
+    modal.addEventListener('animationend', () => {
+      if (modal.style.animationName === 'slideUp') {
+        modal.style.display = 'none';
+        modal.style.animation = 'none';
+      }
+    }
+    );
   });
 });
