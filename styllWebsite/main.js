@@ -131,3 +131,35 @@ modalIndicators.forEach((mi, index) => {
     );
   });
 });
+
+window.dialogPress = function() {
+  console.log("pressed");
+  const dialog = document.getElementById("dialog");
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+  const dialogMessage = document.getElementById("dialog-message");
+
+  if (email == "" || message == "") {
+    dialogMessage.innerHTML = "Please fill out all fields.";
+  }
+  else {
+    dialogMessage.innerHTML = "Thank you for your message! We will get back to you as soon as possible.";
+  }
+  
+  // Show the modal with fade-in animation
+  dialog.showModal();
+  
+  // Automatically hide the modal after 3 seconds (3000 milliseconds)
+  setTimeout(function() {
+    // Add the 'closing' class to apply the fade-out animation
+    dialog.classList.add("closing");
+    
+    // Wait for the animation to complete and then close the modal
+    setTimeout(function() {
+      dialog.close();
+      
+      // Remove the 'closing' class to reset the animation
+      dialog.classList.remove("closing");
+    }, 300); // Adjust the duration to match your animation duration
+  }, 3000); // Delay before automatically hiding the modal
+}
